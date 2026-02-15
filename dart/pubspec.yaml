@@ -1,0 +1,16 @@
+name: apiverve_bitcoin
+description: Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.
+version: 1.1.13
+homepage: https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/bitcoin-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
