@@ -1,12 +1,12 @@
 {
   "name": "@apiverve/bitcoin",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "files": [
     "index.js",
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    ""
+    "bitcoin price", "bitcoin price api", "btc price", "btc price api", "bitcoin market cap"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,15 +34,14 @@
   "bugs": {
     "url": "https://github.com/apiverve/bitcoin-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/bitcoin?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://bitcoin.apiverve.com?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
     "dotenv": "^16.4.7"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
-    "promise": "^8.3.0",
-    "axios": "1.13.2"
+    "axios": "1.13.2",
+    "form-data": "^4.0.1"
   }
 }
