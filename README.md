@@ -1,13 +1,13 @@
-# [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Bitcoin Price API](https://bitcoin.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 
 Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.
 
 The Bitcoin Price API provides a simple, reliable way to integrate bitcoin price functionality into your applications. Built for developers who need production-ready bitcoin price capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/bitcoin?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://bitcoin.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/bitcoin?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://bitcoin.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -50,7 +50,7 @@ callBitcoinPriceAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/bitcoin?param=value" \
+curl -X GET "https://api.apiverve.com/v1/bitcoin" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,14 +150,14 @@ go get github.com/apiverve/bitcoin-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
 
 ## Documentation
 
-- 🏠 **API Home:** [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Bitcoin Price API](https://bitcoin.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/bitcoin](https://docs.apiverve.com/ref/bitcoin)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -169,7 +169,7 @@ go get github.com/apiverve/bitcoin-api/go
 The Bitcoin Price API is commonly used for:
 
 - **Web Applications** - Add bitcoin price features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with bitcoin price capabilities
 - **Data Pipelines** - Process and analyze data at scale
@@ -199,7 +199,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Bitcoin Price API](https://bitcoin.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
