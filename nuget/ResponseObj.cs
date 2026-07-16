@@ -25,6 +25,9 @@ namespace APIVerve.API.BitcoinPrice
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,18 +36,57 @@ namespace APIVerve.API.BitcoinPrice
         public string Currency { get; set; }
 
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public double? Price { get; set; }
 
         [JsonProperty("marketCap")]
-        public long MarketCap { get; set; }
+        public long? MarketCap { get; set; }
 
         [JsonProperty("volume24h")]
-        public long Volume24H { get; set; }
+        public long? Volume24H { get; set; }
 
         [JsonProperty("change24h")]
-        public double Change24H { get; set; }
+        public double? Change24H { get; set; }
 
         [JsonProperty("lastUpdated")]
-        public DateTimeOffset LastUpdated { get; set; }
+        public DateTimeOffset? LastUpdated { get; set; }
+
+        [JsonProperty("high24h")]
+        public double? High24H { get; set; }
+
+        [JsonProperty("low24h")]
+        public double? Low24H { get; set; }
+
+        [JsonProperty("changeDirection")]
+        public string ChangeDirection { get; set; }
+
+        [JsonProperty("formatted")]
+        public Formatted Formatted { get; set; }
+    }
+
+    public partial class Formatted
+    {
+        [JsonProperty("price")]
+        public string Price { get; set; }
+
+        [JsonProperty("marketCap")]
+        public string MarketCap { get; set; }
+
+        [JsonProperty("volume")]
+        public string Volume { get; set; }
+
+        [JsonProperty("priceWords")]
+        public string PriceWords { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
