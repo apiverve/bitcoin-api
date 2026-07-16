@@ -7,7 +7,7 @@ Bitcoin Price is a simple tool for getting the current price of Bitcoin. It retu
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [BitcoinPrice API](https://apiverve.com/marketplace/bitcoin?utm_source=nuget&utm_medium=readme)
+This is a .NET Wrapper for the [BitcoinPrice API](https://bitcoin.apiverve.com?utm_source=nuget&utm_medium=readme)
 
 ---
 
@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.BitcoinPrice;
 
 class Program
 {
@@ -60,8 +60,9 @@ class Program
         // Initialize the API client
         var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    currency = "USD"
+        var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
         // Make the API call
@@ -116,7 +117,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.BitcoinPrice;
 
 public class Example
 {
@@ -124,8 +125,9 @@ public class Example
     {
         var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    currency = "USD"
+        var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -148,7 +150,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.BitcoinPrice;
 
 public class Example
 {
@@ -156,8 +158,9 @@ public class Example
     {
         var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    currency = "USD"
+        var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -185,7 +188,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.BitcoinPrice;
 
 public class Example
 {
@@ -193,8 +196,9 @@ public class Example
     {
         var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    currency = "USD"
+        var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
         try
@@ -237,7 +241,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.BitcoinPrice;
 
 public class Example
 {
@@ -249,8 +253,9 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
-    currency = "USD"
+        var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
         try
@@ -290,8 +295,9 @@ var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
-    currency = "USD"
+var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -316,8 +322,9 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
-    currency = "USD"
+var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -334,8 +341,9 @@ var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
-    currency = "USD"
+var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -346,8 +354,9 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
-    currency = "USD"
+var queryOptions = new BitcoinPriceQueryOptions {
+    Currency = "USD",
+    Hourly = true
 };
 
 using (var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]"))
@@ -372,7 +381,16 @@ using (var apiClient = new BitcoinPriceAPIClient("[YOUR_API_KEY]"))
     "marketCap": 1928000000000,
     "volume24h": 35420000000,
     "change24h": -1.52,
-    "lastUpdated": "2026-02-07T12:00:00.000Z"
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "high24h": 98750.21,
+    "low24h": 96125.88,
+    "changeDirection": "down",
+    "formatted": {
+      "price": "$97,250.43",
+      "marketCap": "$1.93T",
+      "volume": "$35.42B",
+      "priceWords": "ninety-seven thousand two hundred fifty dollars"
+    }
   }
 }
 ```
