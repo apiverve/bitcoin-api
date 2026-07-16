@@ -187,11 +187,42 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Bitcoin Price API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "currency": "USD",
+    "price": 97250.43,
+    "marketCap": 1928000000000,
+    "volume24h": 35420000000,
+    "change24h": -1.52,
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "high24h": 98750.21,
+    "low24h": 96125.88,
+    "changeDirection": "down",
+    "formatted": {
+      "price": "$97,250.43",
+      "marketCap": "$1.93T",
+      "volume": "$35.42B",
+      "priceWords": "ninety-seven thousand two hundred fifty dollars"
+    }
+  }
 }
 ```
 
