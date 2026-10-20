@@ -1,13 +1,12 @@
 Bitcoin Price API
 ============
 
-Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.
+Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add 24-hour volume, market cap, and hourly history.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-bitcoinprice.svg)](https://pypi.org/project/apiverve-bitcoinprice/)
+
+This is a Python wrapper for the [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-bitcoinprice
 
 ## Configuration
 
-Before using the bitcoin API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Bitcoin Price API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -44,7 +43,10 @@ from apiverve_bitcoinprice.apiClient import BitcoinAPIClient
 # Initialize the client with your APIVerve API key
 api = BitcoinAPIClient("[YOUR_API_KEY]")
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 try:
     # Make the API call
@@ -60,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Bitcoin Price API documentation is found here: [https://docs.apiverve.com/ref/bitcoin](https://docs.apiverve.com/ref/bitcoin?utm_source=pypi&utm_medium=readme).
+The Bitcoin Price API documentation is found here: [https://docs.apiverve.com/ref/bitcoin](https://docs.apiverve.com/ref/bitcoin?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -82,7 +84,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 ```
 
 ###### Simple Request
@@ -107,7 +112,16 @@ print(result)
     "marketCap": 1928000000000,
     "volume24h": 35420000000,
     "change24h": -1.52,
-    "lastUpdated": "2026-02-07T12:00:00.000Z"
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "high24h": 98750.21,
+    "low24h": 96125.88,
+    "changeDirection": "down",
+    "formatted": {
+      "price": "$97,250.43",
+      "marketCap": "$1.93T",
+      "volume": "$35.42B",
+      "priceWords": "ninety-seven thousand two hundred fifty dollars"
+    }
   }
 }
 ```
@@ -125,7 +139,10 @@ from apiverve_bitcoinprice.apiClient import BitcoinAPIClient, BitcoinAPIClientEr
 
 api = BitcoinAPIClient("[YOUR_API_KEY]")
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 try:
     result = api.execute(query)
@@ -146,7 +163,10 @@ from apiverve_bitcoinprice.apiClient import BitcoinAPIClient, BitcoinAPIClientEr
 
 api = BitcoinAPIClient("[YOUR_API_KEY]")
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 try:
     result = api.execute(query)
@@ -180,7 +200,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_bitcoinprice.apiClient import BitcoinAPIClient, BitcoinAPIClientError
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 # Using context manager ensures proper cleanup
 with BitcoinAPIClient("[YOUR_API_KEY]") as api:
@@ -206,7 +229,10 @@ from apiverve_bitcoinprice.apiClient import BitcoinAPIClient
 # Enable debug mode
 api = BitcoinAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -221,7 +247,10 @@ from apiverve_bitcoinprice.apiClient import BitcoinAPIClient
 
 api = BitcoinAPIClient("[YOUR_API_KEY]")
 
-query = { "currency": "USD" }
+query = {
+    "currency": "USD",
+    "hourly": true
+}
 
 try:
     result = api.execute(query)
@@ -235,7 +264,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -246,12 +275,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
