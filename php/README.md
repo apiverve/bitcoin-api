@@ -1,6 +1,6 @@
 # Bitcoin Price API - PHP Package
 
-Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.
+Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add 24-hour volume, market cap, and hourly history.
 
 ## Installation
 
@@ -98,11 +98,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/bitcoin?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/bitcoin?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://bitcoin.apiverve.com?utm_source=php&utm_medium=readme](https://bitcoin.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/bitcoin?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/bitcoin?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
