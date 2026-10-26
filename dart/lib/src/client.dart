@@ -46,10 +46,11 @@ final _formatPatterns = {
 
 /// Bitcoin Price API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [currency] - The currency to get the price in
+/// * [hourly] - Include hourly price data for the past 24 hours
 class BitcoinClient {
   final String apiKey;
   final String baseUrl;
@@ -58,6 +59,7 @@ class BitcoinClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'currency': ValidationRule(type: 'string', required: false),
+    'hourly': ValidationRule(type: 'boolean', required: false),
   };
 
   BitcoinClient(this.apiKey, {

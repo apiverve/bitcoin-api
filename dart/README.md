@@ -1,11 +1,11 @@
 # Bitcoin Price API - Dart/Flutter Client
 
-Bitcoin Price is a simple tool for getting the current price of Bitcoin. It returns the current price, market cap, 24-hour trading volume, and 24-hour price change in any currency.
+Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add 24-hour volume, market cap, and hourly history.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_bitcoin.svg)](https://pub.dev/packages/apiverve_bitcoin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_bitcoin: ^1.1.14
+  apiverve_bitcoin: ^1.2.3
 ```
 
 Then run:
@@ -34,7 +34,8 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'currency': 'USD'
+      'currency': 'USD',
+      'hourly': true
     });
 
     print('Status: ${response.status}');
@@ -57,19 +58,28 @@ void main() async {
     "marketCap": 1928000000000,
     "volume24h": 35420000000,
     "change24h": -1.52,
-    "lastUpdated": "2026-02-07T12:00:00.000Z"
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "high24h": 98750.21,
+    "low24h": 96125.88,
+    "changeDirection": "down",
+    "formatted": {
+      "price": "$97,250.43",
+      "marketCap": "$1.93T",
+      "volume": "$35.42B",
+      "priceWords": "ninety-seven thousand two hundred fifty dollars"
+    }
   }
 }
 ```
 
 ## API Reference
 
-- **API Home:** [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/bitcoin](https://docs.apiverve.com/ref/bitcoin?utm_source=dart&utm_medium=readme)
+- **API Home:** [Bitcoin Price API](https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/bitcoin](https://docs.apiverve.com/ref/bitcoin?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -77,4 +87,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
