@@ -51,6 +51,7 @@ final _formatPatterns = {
 /// Parameters:
 /// * [currency] - The currency to get the price in
 /// * [hourly] - Include hourly price data for the past 24 hours
+/// * [daily] - Include the daily closing price, market cap and volume for the last 30 days
 class BitcoinClient {
   final String apiKey;
   final String baseUrl;
@@ -60,6 +61,7 @@ class BitcoinClient {
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'currency': ValidationRule(type: 'string', required: false),
     'hourly': ValidationRule(type: 'boolean', required: false),
+    'daily': ValidationRule(type: 'boolean', required: false),
   };
 
   BitcoinClient(this.apiKey, {
