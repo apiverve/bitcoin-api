@@ -25,16 +25,43 @@ declare module '@apiverve/bitcoin' {
 
 
   interface BitcoinPriceData {
-      currency:        null | string;
-      price:           number | null;
-      marketCap:       number | null;
-      volume24H:       number | null;
-      change24H:       number | null;
-      lastUpdated:     Date | null;
-      high24H:         number | null;
-      low24H:          number | null;
-      changeDirection: null | string;
-      formatted:       Formatted;
+      price:                  number | null;
+      marketCap:              number | null;
+      volume24H:              number | null;
+      change24H:              number | null;
+      currency:               null | string;
+      lastUpdated:            Date | null;
+      high24H:                number | null;
+      low24H:                 number | null;
+      changeAmount24H:        number | null;
+      change1H:               number | null;
+      change7D:               number | null;
+      change30D:              number | null;
+      change1Y:               number | null;
+      marketCapRank:          number | null;
+      circulatingSupply:      number | null;
+      totalSupply:            number | null;
+      maxSupply:              number | null;
+      fullyDilutedValuation:  number | null;
+      allTimeHigh:            number | null;
+      allTimeHighDate:        Date | null;
+      percentFromAllTimeHigh: number | null;
+      allTimeLow:             number | null;
+      allTimeLowDate:         Date | null;
+      high30D:                number | null;
+      low30D:                 number | null;
+      average30D:             number | null;
+      volatility30D:          number | null;
+      daily:                  Daily[];
+      changeDirection:        null | string;
+      formatted:              Formatted;
+  }
+  
+  interface Daily {
+      date:      Date | null;
+      price:     number | null;
+      marketCap: number | null;
+      volume24H: number | null;
   }
   
   interface Formatted {
