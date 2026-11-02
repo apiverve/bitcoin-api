@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-bitcoinprice"
-version = "1.2.3"
+version = "1.2.4"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add 24-hour volume, market cap, and hourly history."
+description = "Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add market cap, 24-hour volume, supply, all-time highs, 1-hour to 1-year changes, 30-day stats, and hourly and 30-day daily history."
 keywords = ["bitcoin price api", "btc price api", "bitcoin api", "bitcoin price", "btc price"]
 readme = "README.md"
 requires-python = ">=3.9"
