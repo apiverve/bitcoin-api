@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_bitcoin: ^1.2.4
+  apiverve_bitcoin: ^1.2.5
 ```
 
 Then run:
