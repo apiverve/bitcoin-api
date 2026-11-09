@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/bitcoin",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Bitcoin Price fetches the current Bitcoin price, recent movement direction, and update timestamps in USD. Paid plans can quote across 172 currencies and add market cap, 24-hour volume, supply, all-time highs, 1-hour to 1-year changes, 30-day stats, and hourly and 30-day daily history.",
   "main": "index.js",
   "types": "index.d.ts",
