@@ -49,7 +49,7 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/bitcoin?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [currency] - The currency to get the price in
+/// * [currency] - The currency to get the price in. Prices of 1 or more round to 2 decimals; smaller ones (quoted in BTC or XAU) keep 6 significant digits
 /// * [hourly] - Include hourly price data for the past 24 hours
 /// * [daily] - Include the daily closing price, market cap and volume for the last 30 days
 class BitcoinClient {
