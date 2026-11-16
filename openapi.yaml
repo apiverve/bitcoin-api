@@ -31,7 +31,10 @@ paths:
           schema:
             type: string
           required: false
-          description: The currency to get the price in
+          description: >-
+            The currency to get the price in. Prices of 1 or more round to 2
+            decimals; smaller ones (quoted in BTC or XAU) keep 6 significant
+            digits
           example: USD
         - name: hourly
           in: query
