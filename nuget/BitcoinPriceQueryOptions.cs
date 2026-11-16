@@ -11,7 +11,7 @@ namespace APIVerve.API.BitcoinPrice
     public class BitcoinPriceQueryOptions
     {
         /// <summary>
-        /// The currency to get the price in
+        /// The currency to get the price in. Prices of 1 or more round to 2 decimals; smaller ones (quoted in BTC or XAU) keep 6 significant digits
         /// </summary>
         [JsonProperty("currency")]
         public string Currency { get; set; }
